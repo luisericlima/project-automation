@@ -19,6 +19,11 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
+      - name: Instalar o Google Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
       - name: Restaurar dependências
         run: dotnet restore
 
@@ -27,3 +32,11 @@ jobs:
 
       - name: Executar os testes
         run: dotnet test --no-build --verbosity normal
+        
+      - name: Upload de screenshots (se falhar)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: tests/screenshots/
+

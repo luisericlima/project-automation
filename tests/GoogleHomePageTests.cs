@@ -12,7 +12,14 @@ namespace TestesAutomatizados
         [Fact]
         public void GoogleHomePage_DeveConterTituloGoogle()
         {
-            using var driver = new ChromeDriver();
+            var options = new ChromeOptions();
+            options.AddArgument("--headless");
+            options.AddArgument("--no-sandbox");
+            options.AddArgument("--disable-dev-shm-usage");
+            options.AddArgument("--disable-gpu");
+            options.AddArgument("--window-size=1920,1080");
+
+            using var driver = new ChromeDriver(options);
 
             try
             {
@@ -22,7 +29,6 @@ namespace TestesAutomatizados
             catch (Exception e)
             {
                 SaveScreenshot(driver);
-
                 throw new Xunit.Sdk.XunitException($"Teste falhou por causa de: {e.Message}");
             }
         }
