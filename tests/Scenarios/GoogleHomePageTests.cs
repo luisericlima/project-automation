@@ -6,7 +6,7 @@ namespace TestesAutomatizados
 {
     public class GoogleHomePageTests : BaseTest
     {
-        private string urlVisited;
+        private string? urlVisited;
 
         [Fact]
         public void GoogleHomePageDeveConterTituloGoogle()
