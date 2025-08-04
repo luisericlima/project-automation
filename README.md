@@ -65,9 +65,14 @@ TestesAutomatizados/
 ├── screenshots/
 │   └── erro_YYYYMMDD_HHmmss.png
 ├── tests/
-│   ├── BaseTest.cs
-│   ├── GoogleHomePageTests.cs
-│   └── ScreenshotConfiguration.cs
+│   ├── Base/
+│   │   ├── BaseTest.cs
+│   │   └── ScreenshotConfiguration.cs
+│   ├── Scenarios/
+│   │   └── GoogleHomePageTests.cs
+│   └── Helpers/
+│       ├── ScreenshotConfiguration.cs
+│       └── TestConstants.cs
 ├── .gitignore
 ├── automation-mereo.csproj
 ├── automation-mereo.sln
