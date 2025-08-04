@@ -52,7 +52,7 @@ public void GoogleHomePage_DeveConterTituloGoogle()
 Obs: A URL "https://www.gogle.com" está propositalmente errada para demonstrar a captura de tela em caso de falha.
 
 ## 📁 Estrutura de Pastas
-
+```
 TestesAutomatizados/
 ├── .github/
 │   └── workflows/
@@ -67,5 +67,6 @@ TestesAutomatizados/
 ├── automation-mereo.csproj
 ├── automation-mereo.sln
 └── README.md
+```
 
 
