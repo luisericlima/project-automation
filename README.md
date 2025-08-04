@@ -27,8 +27,18 @@ dotnet test
 ## 📸 Captura de Tela em Caso de Erro
 Se o teste falhar, será gerada automaticamente uma imagem (.png) da tela no momento do erro. O arquivo é salvo na pasta screenshots com um nome baseado na data e hora do erro.
 
-## Exemplo de Teste
 
+## Exemplo de Teste
+Teste bem-sucedido
+[Fact]
+public void GoogleHomePage_DeveConterTituloGoogle()
+{
+    Driver.Navigate().GoToUrl("https://www.google.com");
+    Driver.Title.Should().Contain("Google");
+}
+Este teste acessa a página correta do Google e valida se o título contém a palavra "Google".
+
+Teste de falha proposital
 [Fact]
 public void GoogleHomePage_DeveConterTituloGoogle()
 {
@@ -37,13 +47,24 @@ public void GoogleHomePage_DeveConterTituloGoogle()
     driver.Navigate().GoToUrl("https://www.gogle.com");
     driver.Title.Should().Contain("Google");
 }
+![alt text](screenshots/erro_20250804_123644.png)
 Obs: A URL "https://www.gogle.com" está propositalmente errada para demonstrar a captura de tela em caso de falha.
 
 ## 📁 Estrutura de Pastas
 
 TestesAutomatizados/
-├── GoogleHomePageTests.cs
+├── .github/
+│   └── workflows/
+│       └── dotnet-tests.yml
 ├── screenshots/
-└── TestesAutomatizados.csproj
+│   └── erro_YYYYMMDD_HHmmss.png
+├── tests/
+│   ├── BaseTest.cs
+│   ├── GoogleHomePageTests.cs
+│   └── ScreenshotConfiguration.cs
+├── .gitignore
+├── automation-mereo.csproj
+├── automation-mereo.sln
+└── README.md
 
 
