@@ -25,7 +25,7 @@ dotnet test
 ```
 
 ## 📸 Captura de Tela em Caso de Erro
-Se o teste falhar, será gerada automaticamente uma imagem (.png) da tela no momento do erro. O arquivo é salvo na pasta screenshots com um nome baseado na data e hora do erro.
+Se o teste falhar, será gerada automaticamente uma imagem (.png) da tela no momento do erro. O arquivo é salvo na pasta screenshots com um nome contendo a data e hora do erro.
 
 
 ## Exemplo de Teste
