@@ -30,15 +30,19 @@ Se o teste falhar, será gerada automaticamente uma imagem (.png) da tela no mom
 
 ## Exemplo de Teste
 Teste bem-sucedido
+```
 [Fact]
+
 public void GoogleHomePage_DeveConterTituloGoogle()
 {
     Driver.Navigate().GoToUrl("https://www.google.com");
     Driver.Title.Should().Contain("Google");
 }
+```
 Este teste acessa a página correta do Google e valida se o título contém a palavra "Google".
 
 Teste de falha proposital
+```
 [Fact]
 public void GoogleHomePage_DeveConterTituloGoogle()
 {
@@ -47,6 +51,7 @@ public void GoogleHomePage_DeveConterTituloGoogle()
     driver.Navigate().GoToUrl("https://www.gogle.com");
     driver.Title.Should().Contain("Google");
 }
+```
 <img width="1904" height="933" alt="erro_20250804_123644" src="https://github.com/user-attachments/assets/3a85f89f-ab79-4ab4-bded-db5db1a96639" />
 
 Obs: A URL "https://www.gogle.com" está propositalmente errada para demonstrar a captura de tela em caso de falha.
