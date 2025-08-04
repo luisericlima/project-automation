@@ -46,7 +46,7 @@ jobs:
         if: success()
         run: |
           curl -X POST -H 'Content-type: application/json' \
-          --data '{"text":"✅ *Pipeline SUCESSO* no repositório `${{ github.repository }}`\nBranch: `${{ github.ref_name }}`\nCommit: `${{ github.sha }}`"}' \
+          --data '{"text":"✅ *Pipeline rodou com SUCESSO* no repositório `${{ github.repository }}`\nBranch: `${{ github.ref_name }}`\nCommit: `${{ github.sha }}`"}' \
           ${{ secrets.SLACK_WEBHOOK_URL }}
 
       - name: Notificar Slack (falha)
