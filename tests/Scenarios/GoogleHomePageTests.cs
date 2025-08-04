@@ -33,7 +33,7 @@ namespace TestesAutomatizados
             try
             {
                 Driver.Navigate().GoToUrl(urlVisited);
-                Driver.Title.Should().NotContain(TestConstants.GoogleTitle);
+                Driver.Title.Should().Contain(TestConstants.GoogleTitle);
             }
             catch
             {
