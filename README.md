@@ -47,7 +47,8 @@ public void GoogleHomePage_DeveConterTituloGoogle()
     driver.Navigate().GoToUrl("https://www.gogle.com");
     driver.Title.Should().Contain("Google");
 }
-![alt text](screenshots/erro_20250804_123644.png)
+<img width="1904" height="933" alt="erro_20250804_123644" src="https://github.com/user-attachments/assets/3a85f89f-ab79-4ab4-bded-db5db1a96639" />
+
 Obs: A URL "https://www.gogle.com" está propositalmente errada para demonstrar a captura de tela em caso de falha.
 
 ## 📁 Estrutura de Pastas
